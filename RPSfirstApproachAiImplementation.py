@@ -39,12 +39,13 @@ inLayer = LinearLayer(round_len)
 hiddenLayer = GaussianLayer(3)
 outLayer = LinearLayer(1)
 
+
 ds = ClassificationDataSet(inputdim, 1, nb_classes=3, class_labels=['rock', 'paper', 'scissors'])
 myNetwork = buildNetwork(inputdim, hiddenneuron, outputdim, outclass=GaussianLayer )
 
-
 p_play_history = []
 score = [0, 0, 0]
+
 
 def clear():        	 # Clear screen
     os.system("clear")
